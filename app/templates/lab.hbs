@@ -1,0 +1,32 @@
+<h1>My lucky day:</h1>
+<button {{action 'myLuckyDay' on='click'}}>presiona</button>
+{{luckyDay}}
+
+<ul>
+{{#each weekDays as |day|}}
+{{#unless day.number}}
+<li>{{day.number}}-{{day.day}}</li>
+{{/unless}}
+{{/each}}
+</ul>
+
+
+{{input type="text" value = newDay}}
+<button{{action 'addDay' on="click"}}>add new day</button>
+<br>
+<br>
+<br>
+<br>
+<h1>Twitter</h1>
+<form {{action 'addTweet' on='submit'}}>
+	<p>{{input type="text" value=newTweet}}<button>send</button></p>
+
+	<ul>
+		{{#each tweets as |tweets|}}
+		<li>{{tweets.user}}-{{tweets.tweet}}</li>
+		{{else}}
+		<p>no hay elementos</p>
+
+		{{/each}}
+	</ul>
+</form>
