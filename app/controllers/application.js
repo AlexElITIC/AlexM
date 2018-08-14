@@ -9,8 +9,8 @@ export default Ember.Controller.extend({
 		'miercoles',
 		'jueves',
 		'viernes',
-		'sabadada',
-		'dominguirri'
+		'sabado',
+		'domingo'
 
 	],
 
