@@ -23,7 +23,7 @@
 
 	<ul>
 		{{#each tweets as |tweets|}}
-		<li>{{tweets.user}}-{{tweets.tweet}}</li>
+		<li>{{tweets.user}}- {{input type='text' value=tweets.tweet}} <button {{action 'deleteTweet' tweets on='click' }}>x</button></li>
 		{{else}}
 		<p>no hay elementos</p>
 

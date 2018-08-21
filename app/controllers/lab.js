@@ -59,7 +59,15 @@ tweets:[],
 				tweet:newTweet
 			});
 			this.set('newTweet',"");
-		}
+		},
+		deleteTweet(tweet){
+			var tweets=this.get('tweets');
+			let result = confirm('deseas borrar este tweet: '+ tweet.tweet)
 
+			if (result) {
+				tweets.removeObject(tweet);
+			}
+
+		}
 	}
 });
