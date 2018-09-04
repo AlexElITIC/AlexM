@@ -10,6 +10,9 @@
 {{/each}}
 </ul>
 
+{{#each model as |meal|}}
+<p>{{meal.name}}</p>
+{{/each}}
 
 {{input type="text" value = newDay}}
 <button{{action 'addDay' on="click"}}>add new day</button>
