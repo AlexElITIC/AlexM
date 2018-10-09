@@ -1,0 +1,21 @@
+<h3>Carrot app</h3>
+
+
+
+	<h3> crear comida</h3>
+	<form {{action 'createMeal' on="submit"}}>
+		{{input type="text" value=newMeal}} <button>crear</button>
+	</form>
+
+	<h3>lista de comidas</h3>
+	<div>
+		<div class="row flex-wrap">
+		{{#each model as |meal|}}
+
+    <div class="col s3">
+			{{meal-card name=meal.name mealId=meal.id}}
+		</div>
+
+		{{/each}}
+	</div>
+	</div>
