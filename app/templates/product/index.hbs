@@ -1,0 +1,23 @@
+<h3>product app</h3>
+
+
+
+	<h3> crear producto</h3>
+	<form {{action 'createProduct' on="submit"}}>
+		{{input type="text" value=newProduct}}
+		{{input type="number" value=calories}} <button>crear</button>
+	</form>
+
+	<h3>lista de productos</h3>
+	<div>
+		<div class="row flex-wrap">
+		{{#each model as |product|}}
+    <div class="col s3">
+			{{product-card title=product.name content=product.calories
+				onUpdate=(action 'updateProduct' product)
+			onDelete=(action 'deleteProduct' product)}}
+		</div>
+
+		{{/each}}
+	</div>
+	</div>

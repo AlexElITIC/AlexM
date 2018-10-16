@@ -11,9 +11,8 @@
 	<div>
 		<div class="row flex-wrap">
 		{{#each model as |meal|}}
-
     <div class="col s3">
-			{{meal-card name=meal.name mealId=meal.id}}
+			{{meal-card name=meal.name mealId=meal.id onUsless=(action 'uslessAction' meal.name)}}
 		</div>
 
 		{{/each}}

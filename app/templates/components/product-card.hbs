@@ -1,0 +1,19 @@
+{{#if (has-block)}}
+{{yield}}
+{{else}}
+<div class="col s12 m7">
+  <div class="card">
+    <div class="card-image">
+      <img src="https://cdn.shopify.com/s/files/1/1266/1857/products/Petes-Paleo-63-1440x600px_d6263d7e-3a12-4571-934e-4ad0a596aa9d.jpg?v=1495004401">
+      <span class="card-title">{{input value=title type="text"}}</span>
+    </div>
+    <div class="card-content">
+      <p>{{input value=content type="text"}}</p>
+    </div>
+    <div class="card-action">
+      <button {{action 'updateItem'}}>update</button>
+      <button {{action 'deleteItem'}}>delete</button>
+    </div>
+  </div>
+</div>
+{{/if}}

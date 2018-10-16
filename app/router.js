@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('carrot', function() {
     this.route('detail', {path: '/:id'});
   });
+  this.route('product', function() {});
 });
 
 export default Router;

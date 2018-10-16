@@ -16,6 +16,9 @@ export default Controller.extend({
     });
 
 
-      }
+  },
+  uslessAction(name){
+    alert("Usless action " + name)
+  }
   }
 });

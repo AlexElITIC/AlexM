@@ -2,8 +2,12 @@ import Component from '@ember/component';
 
 export default Component.extend({
   actions:{
-    usless(){
-      this.onUsless();
-    }
+  updateItem(){
+    this.onUpdate()
+  },
+  deleteItem(){
+    this.onDelete()
   }
+
+}
 });
