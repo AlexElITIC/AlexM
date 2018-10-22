@@ -12,7 +12,7 @@
 	<div>
 		<div class="row flex-wrap">
 		{{#each model as |product|}}
-    <div class="col s3">
+    <div class="col s4">
 			{{product-card title=product.name content=product.calories
 				onUpdate=(action 'updateProduct' product)
 			onDelete=(action 'deleteProduct' product)}}
